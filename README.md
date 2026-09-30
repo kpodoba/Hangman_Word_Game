@@ -122,14 +122,5 @@ Constants at the top of `server.c`:
 
 To add your own words, extend the `words` array in `server.c`.
 
-## Known limitations
 
-- For announcements the server uses the first network interface other than `lo`, so on machines with multiple interfaces (e.g. Docker, VPN) it may announce the wrong address.
-- Discovery only works within a single local network (multicast usually does not cross routers).
-- Guessing the same wrong letter again costs another attempt (the server does not track already used letters).
-- The word is chosen using `srand(time(NULL))` on every new game, so two players starting within the same second get the same word.
-- Game messages and code comments are in Polish.
 
-## License
-
-Add a license of your choice (e.g. MIT) in a `LICENSE` file.
